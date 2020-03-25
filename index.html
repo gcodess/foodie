@@ -1,0 +1,209 @@
+<html>
+
+<head>
+	<meta chaeset="UTF-8">
+	<title>Foodie</title>
+	<!--link rel="stylesheet" href="style.css"-->
+	<style>
+	*{
+margin: 0px;
+padding: 0px;
+}
+
+header{
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("back.jpg");
+	background-size: cover;
+	height: 150vh;
+	width: 100%;
+	background-position: center;
+}
+
+.cover{
+	width: 1000px;
+	margin: auto;
+}
+
+.navi-buttons{
+	float: right;
+	margin-top: 30px;
+	padding: 30px;
+}
+
+.navi-buttons li{
+	display: inline-block;
+}
+
+.navi-buttons li a{
+	color: white;
+	font-family: poppins;
+	font-size: 20px;
+	padding: 5px 20px;
+	text-decoration: none;
+
+}
+
+.navi-buttons li a:hover{
+	background: black;
+	color: white;
+}
+
+.logo img{
+	width:200px;
+	height:200px;
+	float: left;
+}
+
+.welcome{
+	position:absolute;
+	text-align:center;
+	width:600px;
+	height:300px;
+	margin: 20% 30% ;
+}
+
+.welcome{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 26px
+}
+
+.welcome button{
+	width: 25%;
+	border: 1px solid #fff;
+	margin-top:20px;
+	padding: 10px 25px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.welcome button:hover{
+	background: red;
+}
+
+.loginsignup-form{
+	 width: 360px;
+	 padding: 50px;
+	 border: 10px;
+	 margin: auto;
+}
+
+ .form{
+	position: relative;
+	z-index: auto;
+	background: transparent;
+	max-width: 500px;
+	border:10px;
+	margin: auto;
+	padding: 50px;
+	text-align: center;
+}
+
+.form input{
+	font-family: "Times New Roman",Times,Serif;
+	background: #f2f2f2;
+	width: 100%;
+	border: 10px;
+	margin: 0 0 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 15px;
+ }
+
+.form button{
+	font-family: "Times New Roman",Times,Serif;
+	background: #4CAF50;
+	width: 100%;
+	border: 10px;
+	margin: 0 0 10px;
+	padding: 20px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.form button:hover,.form button:active{
+	background: red;
+}
+
+.extra{
+	color: white;
+	margin: 2px 0 0;
+	font-size: 12px;
+}
+
+.extra a{
+	color: red;
+}
+
+.extra a:hover{
+	background: violet;
+}
+
+.signup-form{
+	display: none;
+}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="cover">
+			<div class="logo">
+				<img src="logo.png" alt="Foodrecipe"></img>
+			</div>
+			<ul class="navi-buttons">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Recipes</a></li>
+				<li><a href="#">Regions</a></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+
+		<div class="welcome">
+			<h1 >Welcome Foodie's</h1>
+			<button type="button" onclick='document.getElementById("change").style.display="block"'>Click Me!</button>
+
+         <div class="loginsignup-form">
+
+		<div class="form">
+
+			<form class="signup-form">
+
+				<input type="text" placeholder="username"/>
+				<input type="email" placeholder="@email-id"/>
+				<input type="password" placeholder="password"/>
+				<input type="tel" placeholder="+91-9888767877"/>
+			       <input type="date" placeholder="DOB(dd-mm-yyyy)"/>
+				<button>Signup</button>
+                  <p class="extra"> Already  Existing? <a href="#">Login</a> </p>
+
+			</form>
+
+		<form id="change" style="display:none" class="login-form">
+
+				<input type="email" placeholder="@email-id"/>
+				<input type="password" placeholder="password"/>
+				<button>Login</button>
+	     <p class="extra"> Don't have an Account? <a href="#">Signup</a> </p>
+
+			</form>
+
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<script>
+	$('.extra a').click(function(){$('form').animate({height: 		"toggle",opacity: "toggle"},"slow");});
+	</script>
+		</div>
+	</header>
+
+</body>
+
+</html>
